@@ -1,4 +1,3 @@
-import app from './reducers.js'
 import present from './present.js'
 import nap from './nap.js'
 import state from './state.js'
