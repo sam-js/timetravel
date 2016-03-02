@@ -1,4 +1,3 @@
-import { createStore, combineReducers } from 'redux'
 import app from './reducers.js'
 import present from './present.js'
 import nap from './nap.js'

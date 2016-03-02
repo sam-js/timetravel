@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "./node_modules/.bin/webpack-dev-server --port 1337 --content-base dist --no-info --colors --hot --inline --progress",
-    "build": "rm -f dist/* && NODE_ENV=production node ./node_modules/.bin/webpack --progress --colors && npm run cp:index",
-    "clean": "rm -f dist/* && npm run cp:index",
+    "watch": "npm run clean && ./node_modules/.bin/webpack-dev-server --port 1337 --content-base dist --no-info --colors --hot --inline --progress",
+    "build": "npm run clean && NODE_ENV=production node ./node_modules/.bin/webpack --progress --colors && npm run cp:index",
+    "clean": "mkdir -p dist && rm -f dist/* && npm run cp:index",
     "cp:index": "cp src/index.html dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
